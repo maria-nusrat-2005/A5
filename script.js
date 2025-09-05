@@ -52,32 +52,28 @@ function currentTime() {
   return time;
 }
 
-// Function to copy number from the card
-
-// Function to copy number from the card
 function copyNumber(btn) {
-  // Find parent card
   let card = btn.closest(".card");
-  // Find number inside this card
   let numberEl = card.querySelector(".service-num");
   let number = numberEl.innerText.trim();
 
-  // Create hidden textarea
   let textarea = document.createElement("textarea");
   textarea.value = number;
   document.body.appendChild(textarea);
 
-  // Select and copy
   textarea.select();
-  document.execCommand("copy"); // directly copy
+  document.execCommand("copy");
+  let copyCount = parseInt(document.getElementById("copy-count").innerText);
+  console.log(copyCount);
+  alert("Number is copied");
+  copyCount += 1;
+  document.getElementById("copy-count").innerText = copyCount;
 
-  // Feedback (button text change)
   let oldText = btn.innerHTML;
   btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
   setTimeout(function () {
     btn.innerHTML = oldText;
   }, 1000);
 
-  // Clean up
   document.body.removeChild(textarea);
 }
