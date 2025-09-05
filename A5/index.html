@@ -41,7 +41,7 @@
   <div class="flex-none">
     <div class="flex items-center flex-col md:flex-row gap-4">
         <div>
-         <p class="text-xl bg-green-200 rounded-full p-6 btn"><span>0</span>❤️</p>
+         <p class="text-xl bg-green-200 rounded-full p-6 btn"><span id="heart-count">0</span>❤️</p>
         </div>
         <div >
             <p class="text-xl bg-green-200 rounded-full p-6 btn"><span>100</span><img class="w-6" src="/A5/assets/coin.png" alt=""></p>
@@ -82,7 +82,7 @@
         <img class="w-8"  src="/A5/assets/emergency.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i id="heart-icon" onclick="heartCounting(this)" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">National Emergency Number</p>
     <p class="text-gray-500">National Emergency</p>
@@ -109,10 +109,10 @@
     <div class="flex justify-between items-center">
 
 <div class="bg-blue-100 p-3 rounded-lg">
-        <img class="w-8"  src="/A5/assets/police.png" alt="">
+        <img  class="w-8"  src="/A5/assets/police.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i  onclick="heartCounting(this)" id="heart-icon2" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Police Helpline Number</p>
     <p class="text-gray-500">Police</p>
@@ -142,7 +142,7 @@
         <img class="w-8"  src="/A5/assets/fire-service.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Fire Service Number</p>
     <p class="text-gray-500">Fire Service </p>
@@ -172,7 +172,7 @@
         <img class="w-8"  src="/A5/assets/ambulance.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i  onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Ambulance Service</p>
     <p class="text-gray-500">Ambulance</p>
@@ -199,10 +199,10 @@
     <div class="flex justify-between items-center">
 
 <div class="bg-red-100 p-3 rounded-lg">
-        <img class="w-8"  src="/A5/assets/emergency.png" alt="">
+        <img  class="w-8"  src="/A5/assets/emergency.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Women & Child Helpline</p>
     <p class="text-gray-500">Women & Child Helpline</p>
@@ -232,7 +232,7 @@
         <img class="w-8"  src="/A5/assets/emergency.png" alt="">
 
 </div>
-      <div><i class="fa-regular fa-heart text-lg"></i></div>
+      <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Anti-Corruption Helpline</p>
     <p class="text-gray-500">Anti-Corruption</p>
@@ -279,6 +279,6 @@
    
 </main>
     
-
+<script src="/A5/script.js"></script>
 </body>
 </html>
