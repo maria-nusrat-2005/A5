@@ -18,10 +18,12 @@ function handleCallButton(button) {
   document.getElementById("coin-count").innerText = coins;
   console.log(serviceName, serviceNumber);
   alert(`${serviceName}, ${serviceNumber}`);
-  updateLog(serviceName, serviceNumber);
+  const timeNow = currentTime();
+  console.log(timeNow);
+  updateLog(serviceName, serviceNumber, timeNow);
 }
 
-function updateLog(serviceName, serviceNumber) {
+function updateLog(serviceName, serviceNumber, timeNow) {
   const logContainer = document.getElementById("logs-container");
   const logDiv = document.createElement("div");
 
@@ -31,7 +33,7 @@ function updateLog(serviceName, serviceNumber) {
                    <h4 class="font-bold">${serviceName}</h4>
                    <p>${serviceNumber}</p>
               </div>
-              <p>11:36:58 AM</p>
+              <p>${timeNow}</p>
 
             </div>`;
   console.log(logDiv);
@@ -42,4 +44,40 @@ function updateLog(serviceName, serviceNumber) {
 
 function clearHistory() {
   document.getElementById("logs-container").innerHTML = "";
+}
+
+function currentTime() {
+  let timeNow = new Date();
+  const time = timeNow.toLocaleTimeString();
+  return time;
+}
+
+// Function to copy number from the card
+
+// Function to copy number from the card
+function copyNumber(btn) {
+  // Find parent card
+  let card = btn.closest(".card");
+  // Find number inside this card
+  let numberEl = card.querySelector(".service-num");
+  let number = numberEl.innerText.trim();
+
+  // Create hidden textarea
+  let textarea = document.createElement("textarea");
+  textarea.value = number;
+  document.body.appendChild(textarea);
+
+  // Select and copy
+  textarea.select();
+  document.execCommand("copy"); // directly copy
+
+  // Feedback (button text change)
+  let oldText = btn.innerHTML;
+  btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+  setTimeout(function () {
+    btn.innerHTML = oldText;
+  }, 1000);
+
+  // Clean up
+  document.body.removeChild(textarea);
 }
