@@ -44,7 +44,7 @@
          <p class="text-xl bg-green-200 rounded-full p-6 btn"><span id="heart-count">0</span>❤️</p>
         </div>
         <div >
-            <p class="text-xl bg-green-200 rounded-full p-6 btn"><span>100</span><img class="w-6" src="/A5/assets/coin.png" alt=""></p>
+            <p class="text-xl bg-green-200 rounded-full p-6 btn"><span id="coin-count">100</span><img class="w-6" src="/A5/assets/coin.png" alt=""></p>
         </div>
           <button class="btn bg-green-600 p-6 rounded-full text-white">2 copy</button>
     </div>
@@ -85,9 +85,9 @@
       <div><i id="heart-icon" onclick="heartCounting(this)" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">National Emergency Number</p>
-    <p class="text-gray-500">National Emergency</p>
+    <p class="text-gray-500 service-name">National Emergency</p>
     <br>
-    <p class="font-bold text-2xl"><span>999</span></p>
+    <p class="font-bold text-2xl "><span class="service-num">999</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">All</p>
@@ -96,7 +96,7 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button id="" onclick="handleCallButton(this)" class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
 
     </div>
   </div>
@@ -115,9 +115,9 @@
       <div><i  onclick="heartCounting(this)" id="heart-icon2" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Police Helpline Number</p>
-    <p class="text-gray-500">Police</p>
+    <p class="text-gray-500 service-name">Police</p>
     <br>
-    <p class="font-bold text-2xl"><span>999</span></p>
+    <p class="font-bold text-2xl "><span class="service-num">999</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">Police</p>
@@ -126,7 +126,7 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button onclick="handleCallButton(this)" class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip" ></i> Call</button>
 
     </div>
   </div>
@@ -142,12 +142,12 @@
         <img class="w-8"  src="/A5/assets/fire-service.png" alt="">
 
 </div>
-      <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
+      <div><i onclick="heartCounting(this)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Fire Service Number</p>
-    <p class="text-gray-500">Fire Service </p>
+    <p class="text-gray-500 service-name">Fire Service </p>
     <br>
-    <p class="font-bold text-2xl"><span>999</span></p>
+    <p class="font-bold text-2xl"><span class="service-num">999</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">Fire</p>
@@ -156,7 +156,7 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button onclick="handleCallButton(this)" class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip" ></i> Call</button>
 
     </div>
   </div>
@@ -175,9 +175,9 @@
       <div><i  onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Ambulance Service</p>
-    <p class="text-gray-500">Ambulance</p>
+    <p class="text-gray-500 service-name">Ambulance</p>
     <br>
-    <p class="font-bold text-2xl"><span>1994-999999</span></p>
+    <p class="font-bold text-2xl"><span class="service-num">1994-999999</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">Health</p>
@@ -186,7 +186,7 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button onclick="handleCallButton(this)"  class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
 
     </div>
   </div>
@@ -205,9 +205,9 @@
       <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Women & Child Helpline</p>
-    <p class="text-gray-500">Women & Child Helpline</p>
+    <p class="text-gray-500 service-name">Women & Child Helpline</p>
     <br>
-    <p class="font-bold text-2xl"><span>109</span></p>
+    <p class="font-bold text-2xl"><span class="service-num">109</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">Help</p>
@@ -216,7 +216,7 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button onclick="handleCallButton(this)" class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
 
     </div>
   </div>
@@ -235,9 +235,9 @@
       <div><i onclick="heartCounting(this.id)" id="heart-icon" class="fa-regular fa-heart text-lg"></i></div>
     </div>
     <p class="card-title font-bold text-xl">Anti-Corruption Helpline</p>
-    <p class="text-gray-500">Anti-Corruption</p>
+    <p class="text-gray-500 service-name">Anti-Corruption</p>
     <br>
-    <p class="font-bold text-2xl"><span>106</span></p>
+    <p class="font-bold text-2xl"><span class="service-num" >106</span></p>
  
     <div>
           <p class="text-xl  rounded-full p-6 btn">Govt.</p>
@@ -246,14 +246,14 @@
     <div class="flex justify-between items-center gap-2">
 
       <button class="btn w-1/2 btn-outline border-1 border-gray-300 text-gray-500"><i class="fa-regular fa-copy "></i> Copy</button>
-      <button class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
+      <button onclick="handleCallButton(this)" class="btn bg-green-500 text-white w-1/2 "><i class="fa-solid fa-phone-flip"></i> Call</button>
 
     </div>
   </div>
 </div>
     </div>
     <!-- right div -->
-     <div class="w-full border-2 border-blue-600 md:w-1/4 bg-white rounded-lg p-4">
+     <div class="w-full  md:w-1/4 bg-white rounded-lg p-4">
           <div class="flex justify-between items-center ">
              <div>
                  <h3 class="text-xl "><i class="fa-regular fa-clock"></i> Call History</h3>
